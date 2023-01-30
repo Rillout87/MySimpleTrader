@@ -1,0 +1,8 @@
+<Project DefaultTargets="ControllerTarget" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <UsingTask AssemblyFile="C:\Users\fedorov.kirill\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_b2befcb8_000\JetBrains.Platform.MsBuildTask.v17.dll" TaskName="JetBrains.Platform.MsBuildTask.ControllerTask" />
+ <Target Name="ControllerTarget">
+  <Message Importance="High" Text="Run controller from C:\Users\fedorov.kirill\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_b2befcb8_000\JetBrains.Platform.MsBuildTask.v17.dll" />
+  <ControllerTask PortValue="53825" BuildToolVersion="17.4" LoggerPath="C:\Users\fedorov.kirill\Desktop\C#\MySimpleTrader\C\Temp\JetLogs\MsBuildTask\2023-01-30 13-41-10Z-MsBuildTask.log" />
+ </Target>
+</Project>
+

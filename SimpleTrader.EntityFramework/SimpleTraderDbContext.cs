@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace SimpleTrader.EntityFramework
 {
-    internal class SimpleTraderDbContext : DbContext
+    public class SimpleTraderDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<AssetTransaction> AssetTransactions { get; set; }
+        public SimpleTraderDbContext(DbContextOptions options) : base(options) { }
+        public DbSet<User>? Users { get; set; }
+        public DbSet<Account>? Accounts { get; set; }
+        public DbSet<AssetTransaction>? AssetTransactions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,13 +21,6 @@ namespace SimpleTrader.EntityFramework
             
             base.OnModelCreating(modelBuilder);
         }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectModels;Database=SimpleTraderDB;Trusted_Connection=True");
-            
-            base.OnConfiguring(optionsBuilder);
-        }
-
+        
     }
 }

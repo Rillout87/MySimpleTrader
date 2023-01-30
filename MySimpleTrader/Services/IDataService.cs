@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace MySimpleTrader.Domain.Services
 {
-    internal interface IDataService<T>
+    public interface IDataService<T>
     {
         Task<IEnumerable<T>> GetAll();
-        Task<T> GetIndexBinder(int id);
+        Task<T?> Get(int id);
         Task<T> Update(int id, T entity);
         Task<T> Create(T entity);
         Task <bool> Delete(int id);
